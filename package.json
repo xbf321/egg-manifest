@@ -1,0 +1,49 @@
+{
+    "name": "egg-manifest",
+    "version": "1.0.0",
+    "description": "前后端使用 manifest.json 文件进行关联。",
+    "eggPlugin": {
+      "name": "manifest"
+    },
+    "keywords": [
+      "egg",
+      "eggPlugin",
+      "egg-plugin"
+    ],
+    "dependencies": {
+      "debug": "^3.0.1"
+    },
+    "devDependencies": {
+      "egg": "^2.9.1",
+      "egg-bin": "^4.8.0",
+      "eslint": "^4.11.0",
+      "eslint-config-egg": "^7.0.0"
+    },
+    "engines": {
+      "node": ">=8.0.0"
+    },
+    "scripts": {
+      "test": "export DEBUG=manifest && npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+      "test-local": "egg-bin test",
+      "cov": "egg-bin cov",
+      "lint": "eslint .",
+      "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+      "pkgfiles": "egg-bin pkgfiles",
+      "autod": "autod"
+    },
+    "files": [
+      "app",
+      "config"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/xbf321/egg-manifest.git"
+    },
+    "bugs": {
+      "url": "https://github.com/eggjs/egg/issues"
+    },
+    "homepage": "https://github.com/xbf321/egg-manifest#readme",
+    "author": "xbf321",
+    "license": "MIT"
+  }
+  
